@@ -137,7 +137,7 @@ async def v(ctx, url: str):
 
     file = open(cwd + 'temp.mp4', 'rb')
     caption= f"Sent by: [{ctx.author.display_name}]({url})"
-    await ctx.send(caption, file=discord.File(cwd + "temp.mp4"), silent=True)
+    await ctx.send(caption, file=discord.File(cwd + "temp.mp4"), silent=True, suppress_embeds=True)
     
     subprocess.Popen(deleteTemp, shell=True).wait()
 
