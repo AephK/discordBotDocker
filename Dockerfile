@@ -17,7 +17,7 @@ RUN apk add --no-cache jellyfin-ffmpeg
 
 # Install Intel Media Drivers
 RUN apk add --no-cache intel-media-driver
-RUN apk add onevpl-intel-gpu --repository=http://dl-cdn.alpinelinux.org/alpine/edge/
+RUN apk add onevpl-intel-gpu --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
 # Install JS library for yt-dlp
 RUN curl -fsSL https://deno.land/install.sh | sh
