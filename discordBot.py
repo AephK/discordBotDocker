@@ -62,7 +62,7 @@ bot = commands.Bot(command_prefix='?', description=description, intents=intents)
 async def v(ctx, url: str):
     await ctx.message.delete()
     subprocess.Popen(deleteTemp, shell=True).wait()
-    ydl_opts = {'format_sort' : ['res:1280', '+br'],
+    ydl_opts = {'format_sort' : ['lang:en', 'res:1280', '+br'],
                 'cookiefile' : cookieFile,
                 'merge_output_format' : 'mp4',
                 'outtmpl': cwd + 'temp.mp4'}
